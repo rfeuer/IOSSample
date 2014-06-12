@@ -21,6 +21,7 @@
 		C9FF909E1947B1A900A6ABB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FF90801947B1A900A6ABB0 /* UIKit.framework */; };
 		C9FF90A61947B1A900A6ABB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9FF90A41947B1A900A6ABB0 /* InfoPlist.strings */; };
 		C9FF90A81947B1A900A6ABB0 /* webserviceTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FF90A71947B1A900A6ABB0 /* webserviceTestTests.m */; };
+		C9FF90B31947B23900A6ABB0 /* RWFWebServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FF90B21947B23900A6ABB0 /* RWFWebServiceHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C9FF90A31947B1A900A6ABB0 /* webserviceTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "webserviceTestTests-Info.plist"; sourceTree = "<group>"; };
 		C9FF90A51947B1A900A6ABB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9FF90A71947B1A900A6ABB0 /* webserviceTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webserviceTestTests.m; sourceTree = "<group>"; };
+		C9FF90B11947B23900A6ABB0 /* RWFWebServiceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWFWebServiceHelper.h; sourceTree = "<group>"; };
+		C9FF90B21947B23900A6ABB0 /* RWFWebServiceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWFWebServiceHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		C9FF90821947B1A900A6ABB0 /* webserviceTest */ = {
 			isa = PBXGroup;
 			children = (
+				C9FF90B11947B23900A6ABB0 /* RWFWebServiceHelper.h */,
+				C9FF90B21947B23900A6ABB0 /* RWFWebServiceHelper.m */,
 				C9FF908B1947B1A900A6ABB0 /* RWFAppDelegate.h */,
 				C9FF908C1947B1A900A6ABB0 /* RWFAppDelegate.m */,
 				C9FF908E1947B1A900A6ABB0 /* Main.storyboard */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FF908D1947B1A900A6ABB0 /* RWFAppDelegate.m in Sources */,
+				C9FF90B31947B23900A6ABB0 /* RWFWebServiceHelper.m in Sources */,
 				C9FF90931947B1A900A6ABB0 /* RWFViewController.m in Sources */,
 				C9FF90891947B1A900A6ABB0 /* main.m in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "RWFWebServiceHelper.h"
 
 @interface webserviceTestTests : XCTestCase
 
@@ -14,21 +15,51 @@
 
 @implementation webserviceTestTests
 
+RWFWebServiceHelper *helper = nil;
+
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    helper = [RWFWebServiceHelper sharedInstance];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    
+    helper = nil;
 }
 
-- (void)testExample
+- (void)testGetDataForIdSynchronous
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSInteger myId = 1;
+    NSString *response = [helper getDataForIdSynchronous:myId];
+    
+    NSLog(@"%@", response);
+    
+    NSString *compareString = [NSString stringWithFormat:@"You entered: %ld", (long)myId];
+    
+    XCTAssert([response isEqualToString: compareString], @"response is not as expected!");
+}
+
+
+
+- (void)testGetDataForIdAsynchronous
+{
+    NSInteger myId = 1;
+    __block NSString *response = nil;
+    [helper getDataForIdAsynchronous:myId completionBlock:^(NSString *responseString) {
+        response = responseString;
+    }];
+    
+    while (response == nil) {
+        ;
+    }
+    
+    NSString *compareString = [NSString stringWithFormat:@"You entered: %ld", (long)myId];
+    
+    XCTAssert([response isEqualToString: compareString], @"response is not as expected!");
 }
 
 @end
